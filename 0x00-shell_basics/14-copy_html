@@ -1,0 +1,9 @@
+#!/bin/bash
+for file in *.html; do
+    if [ ! -e "../$file" ] || [ "$file" -nt "../$file" ]; then
+        cp "$file" "../$file"
+        echo "Copied $file to ../$file"
+    else
+        echo "Skipping $file (already exists and is up to date)"
+    fi
+done
