@@ -1,2 +1,2 @@
 #!/bin/bash
-find ./ -type f d -empty  | wc -l '%P\n'
+find . -empty | rev | cut -d '/' -f l | rev
